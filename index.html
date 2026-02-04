@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="es">
     <head>
@@ -138,3 +139,145 @@
     </a>
 
       <!-- CTA eliminado: queda solo el botón circular de WhatsApp -->
+=======
+<!doctype html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tienda de Ladrillos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <!-- Logo: coloca el archivo que adjuntaste en assets/logo.png -->
+          <img src="assets/logo.jpg" alt="Logo" class="logo">
+        </div>
+        <nav class="main-nav">
+          <a href="#" class="nav-link" data-target="home">Inicio</a>
+          <div class="nav-item has-dropdown">
+            <a href="#" class="nav-link" id="productosBtn">Productos ▾</a>
+            <div class="dropdown-panel" id="productosPanel">
+              <div class="dropdown-grid">
+                <button class="cat-btn dd-cat" data-cat="estructural">Estructurales</button>
+                <button class="cat-btn dd-cat" data-cat="techos">Techos</button>
+                <button class="cat-btn dd-cat" data-cat="muros">Muros y tabiquería</button>
+                <button class="cat-btn dd-cat" data-cat="acabados">Acabados</button>
+                <button class="cat-btn dd-cat" data-cat="all">Todos</button>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="nav-link" data-target="about">Acerca</a>
+        </nav>
+        
+      </div>
+      <!-- notice eliminado -->
+    </header>
+
+    <!-- Hero: pantalla completa con contenido principal -->
+    <section class="hero">
+      <!-- Video background: usa tu archivo local hero.mp4 en assets/ -->
+      <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="assets/hero.jpg">
+        <source src="assets/hero.mp4" type="video/mp4">
+        <!-- Si el navegador no soporta video, se mostrará el fondo de heroBg o las slides como fallback -->
+      </video>
+      <div id="heroBg" class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay">
+        <div class="container hero-inner">
+          <div class="hero-card">
+            <h1 id="heroTitle">Marketgrif — Ladrillos y materiales de confianza</h1>
+            <p id="heroDesc">Suministro de ladrillos y materiales con calidad certificada, logística ágil y asesoría técnica para tu proyecto.</p>
+            <div class="hero-cta">
+              <a class="btn-primary" href="#" data-target="products">Ver Productos</a>
+            </div>
+            <div class="hero-dots" id="heroDots" aria-hidden="false"></div>
+          </div>
+          <div class="scroll-indicator" aria-hidden="true">↓</div>
+          <div class="hero-info" id="heroInfo">
+            <p><strong>Atención comercial:</strong> Contáctanos por WhatsApp para cotizaciones rápidas.</p>
+            <button class="close-info" aria-label="Cerrar">✕</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías rápidas -->
+    <div class="categories container">
+      <button class="cat-btn" data-cat="all">Todos</button>
+      <button class="cat-btn" data-cat="estructural">Estructurales</button>
+      <button class="cat-btn" data-cat="techos">Techos</button>
+      <button class="cat-btn" data-cat="muros">Muros y tabiquería</button>
+      <button class="cat-btn" data-cat="acabados">Acabados</button>
+    </div>
+
+    <main class="container">
+      <!-- Inicio ya mostrado en hero; aquí van Productos y Acerca -->
+
+      <section id="products" class="page" style="display:none">
+        <h2>Productos</h2>
+        <div class="grid" id="productGrid">
+          <!-- Productos generados por JavaScript -->
+        </div>
+      </section>
+
+      <section id="about" class="page" style="display:none">
+        <h2>Acerca de Marketgrif</h2>
+        <div class="about-grid">
+          <div class="about-main">
+            <h3>Misión</h3>
+            <p>Brindar materiales de construcción de alta calidad, con asesoría técnica y logística eficiente, contribuyendo al éxito de cada proyecto de nuestros clientes.</p>
+            <h3>Visión</h3>
+            <p>Ser la empresa líder en distribución de ladrillos y materiales, reconocida por la confianza, innovación y excelencia en el servicio.</p>
+            <h3>Valores</h3>
+            <ul class="about-values">
+              <li>Calidad y confianza</li>
+              <li>Compromiso con el cliente</li>
+              <li>Responsabilidad y ética</li>
+              <li>Innovación y mejora continua</li>
+            </ul>
+            <h3>Nuestra Historia</h3>
+            <p>Marketgrif nace con la visión de transformar la experiencia de compra de materiales de construcción, integrando tecnología, asesoría y un trato cercano. Más de 10 años de experiencia nos respaldan.</p>
+          </div>
+          <div class="about-gallery">
+            <!-- Cambia las imágenes por las de tu empresa en assets/ -->
+            <img src="assets/about1.jpg" alt="Equipo Marketgrif" class="about-img">
+            <img src="assets/about2.jpg" alt="Planta de producción" class="about-img">
+            <img src="assets/about3.jpg" alt="Entrega de materiales" class="about-img">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <div class="modal-image" id="modalImage"><img src="" alt=""></div>
+        <div class="modal-body">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 id="modalTitle">Título</h3>
+            <button class="close" id="closeBtn">✕</button>
+          </div>
+          <p id="modalDesc"></p>
+          <p><strong>Precio:</strong> <span id="modalPrice"></span></p>
+          <p><strong>Características:</strong></p>
+          <ul class="features" id="modalFeatures"></ul>
+          <div style="margin-top:12px">
+            <label for="customerName" style="font-weight:600">Tu nombre (opcional)</label>
+            <input id="customerName" type="text" placeholder="Ej. Juan Pérez" style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6e6e6">
+          </div>
+          <div style="margin-top:12px">
+            <a id="waBtn" class="btn-whatsapp" href="#" target="_blank" rel="noopener">Ir a WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+    <a id="floatingWa" class="floating-wa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" aria-hidden="true">
+    </a>
+
+      <!-- CTA eliminado: queda solo el botón circular de WhatsApp -->
+>>>>>>> fdf093cffd62ade9c9c0f0a1ff586293b84a4bfe
